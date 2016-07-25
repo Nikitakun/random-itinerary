@@ -82,7 +82,6 @@
       }
 
       .map-container {
-        height: 500px;
         max-width: 1200px;
         opacity: 0;
         transition: transform 0.4s ease-in,
@@ -156,6 +155,7 @@
 
       processInput(geocoder, map);
 
+      mapContainer.style.height = '500px';
       mapContainer.style.opacity = 1;
       mapContainer.style.transform = 'translateY(-100px)';
     }
