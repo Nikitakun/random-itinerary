@@ -7,10 +7,6 @@
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:700italic,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <style>
       html, body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         margin: 0;
         padding: 5%;
         padding-top: 120px;
@@ -35,6 +31,7 @@
 
       .input-container {
         position: relative;
+        margin: 0 auto;
         margin-bottom: 40px;
         width: 100%;
         max-width: 500px;
@@ -71,8 +68,10 @@
 
       .search-button {
         display: block;
+        margin: 0 auto;
         margin-bottom: 60px;
         padding: 30px 25px;
+        max-width: 250px;
         font-weight: normal;
         text-decoration: none;
         color: #1f1f1f;
@@ -81,6 +80,7 @@
       }
 
       .map-container {
+        margin: 0 auto;
         max-width: 1200px;
         opacity: 0;
         transition: transform 0.4s ease-in,
@@ -181,6 +181,7 @@
         function calcRandomCoords(withinLat, withinLng) {
           var rand1 = Math.random();
           var rand2 = Math.random();
+          if (rand1.toFixed(1) === rand2.toFixed(1)) rand2 += 0.4;
 
           var newLat1 = rand1 * withinLat;
           var newLng1 = rand1 * withinLng;
